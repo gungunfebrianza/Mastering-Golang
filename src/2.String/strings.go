@@ -6,6 +6,12 @@ import (
 )
 
 func main() {
+	//Escape Sequences
+	fmt.Println("\n Newline") // Add New Line
+	fmt.Println("\t tab")     // Add Tab
+	fmt.Println("\" \" ")     // Add Double Quote
+	fmt.Println(" \\ ")       // Add Backslash
+
 	// Title returns a copy of the string s with all Unicode letters that begin words mapped to their Unicode title case.
 	fmt.Println(strings.Title("gun gun febrianza")) // Output : Gun Gun Febrianza
 
