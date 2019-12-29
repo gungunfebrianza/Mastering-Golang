@@ -56,4 +56,11 @@ func main() {
 	fmt.Println(strings.Index("Febrianza", "nza")) // Output : 6
 	fmt.Println(strings.Index("Febrianza", "nzo")) // Output : -1
 	fmt.Println(strings.Index("Febrianza", ""))    // Output : 0
+
+	//LastIndex returns the index of the last instance of substr in s, or -1 if substr is not present in s.
+	fmt.Println(strings.Index("Gun Gun Febrianza", "Gun"))     // Output : 0
+	fmt.Println(strings.LastIndex("Gun Gun Febrianza", "Gun")) // Output : 4
+	fmt.Println(strings.LastIndex("Gun Gun Febrianza", "Gon")) // Output : -1
+	fmt.Println(strings.LastIndex("Gun Gun Febrianza", ""))    // Output : 17
+
 }
