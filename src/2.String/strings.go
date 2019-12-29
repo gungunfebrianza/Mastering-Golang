@@ -41,8 +41,14 @@ func main() {
 	fmt.Println(strings.EqualFold("Gun", "Gan")) // Output : false
 
 	//HasPrefix tests whether the string s begins with prefix.
-	fmt.Println(strings.HasPrefix("Marketkoin", "mar"))
-	fmt.Println(strings.HasPrefix("Marketkoin", "Mar"))
-	fmt.Println(strings.HasPrefix("Marketkoin", "Mur"))
-	fmt.Println(strings.HasPrefix("Marketkoin", ""))
+	fmt.Println(strings.HasPrefix("Marketkoin", "mar")) // Output : false
+	fmt.Println(strings.HasPrefix("Marketkoin", "Mar")) // Output : true
+	fmt.Println(strings.HasPrefix("Marketkoin", "Mur")) // Output : false
+	fmt.Println(strings.HasPrefix("Marketkoin", ""))    // Output : true
+
+	//HasSuffix tests whether the string s ends with suffix.
+	fmt.Println(strings.HasSuffix("Marketkoin", "koin")) // Output : true
+	fmt.Println(strings.HasSuffix("Marketkoin", "Koin")) // Output : false
+	fmt.Println(strings.HasSuffix("Marketkoin", "Mar"))  // Output : false
+	fmt.Println(strings.HasSuffix("Marketkoin", ""))     // Output : true
 }
