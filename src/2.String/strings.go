@@ -51,4 +51,9 @@ func main() {
 	fmt.Println(strings.HasSuffix("Marketkoin", "Koin")) // Output : false
 	fmt.Println(strings.HasSuffix("Marketkoin", "Mar"))  // Output : false
 	fmt.Println(strings.HasSuffix("Marketkoin", ""))     // Output : true
+
+	//Index returns the index of the first instance of substr in s, or -1 if substr is not present in s.
+	fmt.Println(strings.Index("Febrianza", "nza")) // Output : 6
+	fmt.Println(strings.Index("Febrianza", "nzo")) // Output : -1
+	fmt.Println(strings.Index("Febrianza", ""))    // Output : 0
 }
