@@ -63,4 +63,7 @@ func main() {
 	fmt.Println(strings.LastIndex("Gun Gun Febrianza", "Gon")) // Output : -1
 	fmt.Println(strings.LastIndex("Gun Gun Febrianza", ""))    // Output : 17
 
+	//Repeat returns a new string consisting of count copies of the string s.
+	fmt.Println(strings.Repeat("Gun", 2)) // Output : GunGun
+
 }
