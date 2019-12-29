@@ -32,4 +32,6 @@ func main() {
 	fmt.Println(strings.Compare("makan", "minum")) // Output : -1
 	fmt.Println(strings.Compare("minum", "makan")) // Output : 1
 
+	//Count counts the number of non-overlapping instances of substr in s. If substr is an empty string, Count returns 1 + the number of Unicode code points in s.
+	fmt.Println(strings.Count("Gun Gun Febrianza", "n")) // Output :
 }
