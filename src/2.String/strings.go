@@ -40,4 +40,9 @@ func main() {
 	fmt.Println(strings.EqualFold("Gun", "gun")) // Output : true
 	fmt.Println(strings.EqualFold("Gun", "Gan")) // Output : false
 
+	//HasPrefix tests whether the string s begins with prefix.
+	fmt.Println(strings.HasPrefix("Marketkoin", "mar"))
+	fmt.Println(strings.HasPrefix("Marketkoin", "Mar"))
+	fmt.Println(strings.HasPrefix("Marketkoin", "Mur"))
+	fmt.Println(strings.HasPrefix("Marketkoin", ""))
 }
