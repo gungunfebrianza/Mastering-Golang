@@ -33,5 +33,11 @@ func main() {
 	fmt.Println(strings.Compare("minum", "makan")) // Output : 1
 
 	//Count counts the number of non-overlapping instances of substr in s. If substr is an empty string, Count returns 1 + the number of Unicode code points in s.
-	fmt.Println(strings.Count("Gun Gun Febrianza", "n")) // Output :
+	fmt.Println(strings.Count("Gun Gun Febrianza", "n"))  // Output : 3
+	fmt.Println(strings.Count("Gun Gun Febrianza", "un")) // Output : 2
+
+	//EqualFold reports whether s and t, interpreted as UTF-8 strings, are equal under Unicode case-folding.
+	fmt.Println(strings.EqualFold("Gun", "gun")) // Output : true
+	fmt.Println(strings.EqualFold("Gun", "Gan")) // Output : false
+
 }
