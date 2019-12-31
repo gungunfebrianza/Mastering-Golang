@@ -14,4 +14,7 @@ func main() {
 	fmt.Println(reflect.TypeOf(tagihan)) // Output : float64
 	nganggur := true
 	fmt.Println(reflect.TypeOf(nganggur)) // Output : bool
+	tinggi, berat := 167, 56
+	fmt.Println(reflect.TypeOf(tinggi)) // Output : int
+	fmt.Println(reflect.TypeOf(berat))  // Output : int
 }
