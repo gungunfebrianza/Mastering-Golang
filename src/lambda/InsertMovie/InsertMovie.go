@@ -19,7 +19,7 @@ var movies = []Movie{
 	},
 	Movie{
 		ID:   2,
-		Name: "Gun Gun Febrianza",
+		Name: "SAW",
 	},
 }
 
