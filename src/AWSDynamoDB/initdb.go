@@ -16,10 +16,6 @@ func main() {
 
 	// Create DynamoDB client
 	svc := dynamodb.New(sess)
-	// snippet-end:[dynamodb.go.list_tables.session]
-
-	// snippet-start:[dynamodb.go.list_tables.call]
-	// create the input configuration instance
 	input := &dynamodb.ListTablesInput{}
 
 	fmt.Printf("Tables:\n")
@@ -36,8 +32,6 @@ func main() {
 					fmt.Println(aerr.Error())
 				}
 			} else {
-				// Print the error, cast err to awserr.Error to get the Code and
-				// Message from an error.
 				fmt.Println(err.Error())
 			}
 			return
@@ -47,16 +41,11 @@ func main() {
 			fmt.Println(*n)
 		}
 
-		// assign the last read tablename as the start for our next call to the ListTables function
-		// the maximum number of table names returned in a call is 100 (default), which requires us to make
-		// multiple calls to the ListTables function to retrieve all table names
 		input.ExclusiveStartTableName = result.LastEvaluatedTableName
 
 		if result.LastEvaluatedTableName == nil {
 			break
 		}
 	}
-	// snippet-end:[dynamodb.go.list_tables.call]
-}
 
-// snippet-end:[dynamodb.go.list_tables]
+}
