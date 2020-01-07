@@ -1,8 +1,9 @@
 package main
 
 import (
-	"github.com/aws/aws-lambda-go/lambda"
 	"encoding/json"
+
+	"github.com/aws/aws-lambda-go/lambda"
 
 	"github.com/aws/aws-lambda-go/events"
 )
@@ -29,7 +30,7 @@ func insert(req events.APIGatewayProxyRequest) (events.APIGatewayProxyResponse, 
 	if err != nil {
 		return events.APIGatewayProxyResponse{
 			StatusCode: 400,
-			Body:       "Invalid Payload",
+			Body:       req.Body,
 		}, nil
 	}
 
@@ -37,13 +38,13 @@ func insert(req events.APIGatewayProxyRequest) (events.APIGatewayProxyResponse, 
 	response, err := json.Marshal(movies)
 	if err != nil {
 		return events.APIGatewayProxyResponse{
-			StatusCode:500,
-			Body: err.Error(),
+			StatusCode: 500,
+			Body:       err.Error(),
 		}, nil
 	}
 
 	return events.APIGatewayProxyResponse{
-		StatusCode:200,
+		StatusCode: 200,
 		Headers: map[string]string{
 			"Content-Type": "Application/json",
 		},
@@ -51,6 +52,6 @@ func insert(req events.APIGatewayProxyRequest) (events.APIGatewayProxyResponse, 
 	}, nil
 }
 
-func main()  {
+func main() {
 	lambda.Start(insert)
 }
