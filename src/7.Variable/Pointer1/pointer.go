@@ -13,5 +13,4 @@ func main() {
 		fmt.Printf("pointerInteger: %#v\n", *pointerInteger)
 		// Output : no output
 	}
-
 }
