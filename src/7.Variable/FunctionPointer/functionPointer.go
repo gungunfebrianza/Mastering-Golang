@@ -4,23 +4,23 @@ import (
 	"fmt"
 )
 
-func add5Value(count int) {
-	count += 5
-	fmt.Println("Add 5 Value : ", count)
+func passingValue(count int) {
+	count += 10
+	fmt.Println("Passing Value Result : ", count)
 }
 
-func add5Point(count *int) {
+func passingPointer(count *int) {
 	//Dereference the value and add 5 to it
-	*count += 5
-	fmt.Println("Add 5 Point : ", *count)
+	*count += 10
+	fmt.Println("Passing Pointer Result : ", *count)
 }
 
 func main() {
 	var count int
-	add5Value(count)
-	fmt.Println("add5Value post:", count)
-
+	passingValue(count)
+	fmt.Println("Function passingValue:", count)
+	fmt.Println()
 	// use & to pass a pointer to the variable
-	add5Point(&count)
-	fmt.Println("add5Point post:", count)
+	passingPointer(&count)
+	fmt.Println("Function passingPointer post:", count)
 }
