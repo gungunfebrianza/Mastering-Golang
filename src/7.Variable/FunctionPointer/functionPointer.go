@@ -17,10 +17,12 @@ func passingPointer(count *int) {
 
 func main() {
 	var count int
-	passingValue(count)
+	passingValue(count) // passing value
 	fmt.Println("Function passingValue:", count)
+
 	fmt.Println()
+
 	// use & to pass a pointer to the variable
-	passingPointer(&count)
-	fmt.Println("Function passingPointer post:", count)
+	passingPointer(&count) // passing value by pointer
+	fmt.Println("Function passingPointer:", count)
 }
