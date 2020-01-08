@@ -4,25 +4,25 @@ import (
 	"fmt"
 )
 
-func passingValue(count int) {
+func passingByValue(count int) {
 	count += 10
-	fmt.Println("Passing Value Result : ", count)
+	fmt.Println("Passed Value : ", count)
 }
 
-func passingPointer(count *int) {
+func passingByPointer(count *int) {
 	//Dereference the value and add 5 to it
 	*count += 10
-	fmt.Println("Passing Pointer Result : ", *count)
+	fmt.Println("Passed Pointer : ", *count)
 }
 
 func main() {
 	var count int
-	passingValue(count) // passing value
-	fmt.Println("Function passingValue:", count)
+	passingByValue(count) // passing value
+	fmt.Println("Function passingByValue Result:", count)
 
 	fmt.Println()
 
 	// use & to pass a pointer to the variable
-	passingPointer(&count) // passing value by pointer
-	fmt.Println("Function passingPointer:", count)
+	passingByPointer(&count) // passing value by pointer
+	fmt.Println("Function passingByPointer Result:", count)
 }
