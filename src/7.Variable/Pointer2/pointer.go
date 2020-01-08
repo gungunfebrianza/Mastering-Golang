@@ -9,7 +9,7 @@ func main() {
 	// Declare a pointer using existing variable
 	var dataPointer = &variableInteger
 	fmt.Printf("variableInteger: %#v\n", variableInteger)
-	// Output : pointerInteger: 5
+	// Output : variableInteger: 5
 	fmt.Printf("dataPointer: %#v\n", dataPointer)
 	// Output : dataPointer: (*int)(0xc0000140b0)
 
