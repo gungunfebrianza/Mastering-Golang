@@ -6,10 +6,8 @@ import (
 
 func main() {
 
-	input := 7
+	input := 4
 	if input%2 == 0 {
-		fmt.Println("Genap")
-	} else {
-		fmt.Println("Ganjil")
+		fmt.Println("Even")
 	}
 }
