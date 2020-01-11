@@ -4,29 +4,30 @@ import (
 	"fmt"
 )
 
-type Foo struct {
-	Item string
+type Hooman struct {
+	name string
+	age  int
 }
 
-func XFoo(value string) *Foo {
-	return &Foo{
-		Item: value,
+func XHooman(name string, age int) *Hooman {
+	return &Hooman{
+		name: name,
+		age:  age,
 	}
 }
 
-func (f *Foo) getItem() string {
-	return f.Item
+func (f *Hooman) getName() string {
+	return f.name
 }
 
-func (f *Foo) setItem(value string) {
-	f.Item = value
+func (f *Hooman) setName(value string) {
+	f.name = value
 }
 
 func main() {
-	foox := XFoo("test")
-	fmt.Println(foox.Item)
-	foox.setItem("Skill!")
-	fmt.Println(foox.Item)
-	item := foox.getItem()
-	fmt.Println(item)
+	human := XHooman("Nikolaj Vestorp", 33)
+	fmt.Println(human.name)
+	human.setName("Gun Gun Febrianza")
+	fmt.Println(human.name)
+	fmt.Println(human.getName())
 }
