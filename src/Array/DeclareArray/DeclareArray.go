@@ -19,4 +19,8 @@ func main() {
 
 	cars := [2]string{"Pajero","Lamborghini Veneno"}
 	fmt.Println(cars)
+
+	/* Compiler determines the length of array */
+  scores := [...]int{12, 78, 50, 100, 2, 34, 56, 7, 88}
+  fmt.Println(scores, len(scores))
 }
